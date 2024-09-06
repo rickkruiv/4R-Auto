@@ -12,6 +12,7 @@ body {
 button {
     cursor: pointer;
     transition: .4s;
+
     & i {
         margin-left: .5rem;
     }
@@ -21,6 +22,7 @@ button.cta {
     background-color: #EE6C7D;
     padding: .5rem 1rem;
     border: 2px solid #EE6C7D;
+    outline: 0;
     border-radius: 1rem;
     color: #FFFFFF;
     font-weight: bold;
@@ -36,6 +38,7 @@ header {
     background: #FFFFFF;
     box-shadow: 0px 0px 10px -5px #686868;
     border-radius: 0 0 5px 5px;
+
     & #header {
         width: 80%;
         margin: 0 auto;
@@ -89,7 +92,7 @@ header {
     height: 550px;
     width: 100%;
 
-    border-radius: 0  0 10px 10px;
+    border-radius: 0 0 10px 10px;
     overflow: hidden;
 
     & .banner-layer {
@@ -168,6 +171,7 @@ main {
         border-radius: 1rem;
         position: relative;
         height: 390px;
+
         & img {
             width: 300px;
             height: 200px;
@@ -202,20 +206,20 @@ main {
             color: #FFFFFF;
         }
     }
-    
+
 }
 
 /* ----- POP UP ----- */
 #pop-up-layer {
     background-color: rgba(51, 51, 51, 0.6);
-    width: 100vw;
-    height: 100vh;
+    width: 100%;
+    height: 100%;
     z-index: 2;
     position: fixed;
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
-    overflow:hidden;
+    overflow: hidden;
 }
 
 .pop-up {
@@ -243,7 +247,7 @@ main {
     }
 
     & ul {
-        margin-top: 2rem;
+        margin-top: 1.5rem;
     }
 
     & li {
@@ -257,7 +261,7 @@ main {
         right: 2.5rem;
     }
 
-    & button.cta:hover {        
+    & button.cta:hover {
         background-color: #FFFFFF;
         color: #EE6C7D;
     }
@@ -276,10 +280,29 @@ main {
 
 body.no-scroll {
     overflow: hidden;
+    width: calc(100% - 4px);
 }
 
 /* ----- POP UP -----  */
 
 footer {
     height: 200px;
+}
+
+::-webkit-scrollbar {
+    width: 4px;
+    transition: .4s;
+}
+
+::-webkit-scrollbar-track {
+    background: #f1f1f1;
+}
+
+::-webkit-scrollbar-thumb {
+    background: rgba(51, 51, 51, 0.6);
+    border-radius: 10px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+    background: #EE6C7D;
 }
