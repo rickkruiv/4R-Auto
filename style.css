@@ -1,0 +1,285 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: "Montserrat", system-ui;
+}
+
+body {
+    transition: .4s;
+}
+
+button {
+    cursor: pointer;
+    transition: .4s;
+    & i {
+        margin-left: .5rem;
+    }
+}
+
+button.cta {
+    background-color: #EE6C7D;
+    padding: .5rem 1rem;
+    border: 2px solid #EE6C7D;
+    border-radius: 1rem;
+    color: #FFFFFF;
+    font-weight: bold;
+}
+
+header {
+    position: fixed;
+    width: 100%;
+    top: 0;
+
+    z-index: 2;
+
+    background: #FFFFFF;
+    box-shadow: 0px 0px 10px -5px #686868;
+    border-radius: 0 0 5px 5px;
+    & #header {
+        width: 80%;
+        margin: 0 auto;
+        padding: 1rem 0;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+
+        & nav {
+            display: flex;
+            gap: 1rem;
+            justify-content: center;
+            align-items: center;
+
+            & a {
+                color: #333333;
+                text-decoration: none;
+                font-weight: bold;
+                position: relative;
+            }
+
+            & a::before {
+                content: '';
+                position: absolute;
+                bottom: 0;
+                width: 0;
+                height: 2px;
+                border-radius: 5px;
+                transition: .4s;
+            }
+
+            & a:hover::before {
+                background-color: #333333;
+                width: 100%;
+            }
+
+            & button.cta:hover {
+                background-color: #FFFFFF;
+                color: #EE6C7D;
+            }
+        }
+    }
+}
+
+#hero {
+    margin-top: 3.5rem;
+    background: url(imgs/volkswagen-red-golf-gti.jpg);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    height: 550px;
+    width: 100%;
+
+    border-radius: 0  0 10px 10px;
+    overflow: hidden;
+
+    & .banner-layer {
+        width: 100%;
+        height: 550px;
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+        justify-content: center;
+        padding: 4rem;
+
+        background-color: rgba(51, 51, 51, 0.6);
+        color: #FFFFFF;
+
+        & h1 {
+            font-size: 3rem;
+            text-transform: uppercase;
+        }
+
+        & p {
+            width: 900px;
+            margin: 1rem 0 2rem 0;
+        }
+    }
+
+    & button.cta:hover {
+        background-color: transparent;
+        border: 2px solid #FFFFFF;
+    }
+}
+
+main {
+    width: 1060px;
+    margin: 0 auto;
+    margin-top: 5rem;
+}
+
+#services-container {
+    & h2 {
+        text-align: center;
+        margin-bottom: 1rem;
+    }
+
+    & .services-type {
+        margin-bottom: 2rem;
+        position: relative;
+    }
+
+    & .services-type h2 {
+        font-size: 1rem;
+        text-align: start;
+        padding-left: .5rem;
+        position: relative;
+    }
+
+    & .services-type h2::before {
+        content: '';
+        position: absolute;
+        background-color: #EE6C7D;
+        border-radius: 5px;
+        width: 3px;
+        height: 100%;
+        left: 0;
+    }
+
+    & .services-content {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        gap: 2rem;
+    }
+
+    & .service {
+        padding: 1rem;
+        box-shadow: 0px 0px 10px -5px #686868;
+        border-radius: 1rem;
+        position: relative;
+        height: 390px;
+        & img {
+            width: 300px;
+            height: 200px;
+            object-fit: cover;
+            border-radius: 10px;
+        }
+
+        & h3 {
+            margin: .5rem 0;
+        }
+
+        & p {
+            margin-bottom: 1rem;
+        }
+
+        & .find-out {
+            position: absolute;
+            width: 300px;
+            left: 50%;
+            bottom: 1.5rem;
+            transform: translateX(-50%);
+            padding: .5rem 1rem;
+            border-radius: 1rem;
+            border: 2px solid #EE6C7D;
+            background-color: #FFFFFF;
+            color: #EE6C7D;
+            font-weight: bold;
+        }
+
+        & .find-out:hover {
+            background-color: #EE6C7D;
+            color: #FFFFFF;
+        }
+    }
+    
+}
+
+/* ----- POP UP ----- */
+#pop-up-layer {
+    background-color: rgba(51, 51, 51, 0.6);
+    width: 100vw;
+    height: 100vh;
+    z-index: 2;
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    overflow:hidden;
+}
+
+.pop-up {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: #FFFFFF;
+    box-shadow: 0px 0px 10px -5px #686868;
+    width: 60%;
+    border-radius: 1rem;
+    padding: 2rem;
+    height: 480px;
+
+    & h2 {
+        text-align: start !important;
+    }
+
+    & img {
+        height: 200px;
+        width: 100%;
+        object-fit: cover;
+        border-radius: .5rem;
+        margin-bottom: 1rem;
+    }
+
+    & ul {
+        margin-top: 2rem;
+    }
+
+    & li {
+        margin-left: 2rem;
+        margin-bottom: .5rem;
+    }
+
+    & button.cta {
+        position: absolute;
+        bottom: 2.5rem;
+        right: 2.5rem;
+    }
+
+    & button.cta:hover {        
+        background-color: #FFFFFF;
+        color: #EE6C7D;
+    }
+
+    #close-pop-up {
+        position: absolute;
+        top: .8rem;
+        right: .8rem;
+        transition: .4s;
+    }
+
+    #close-pop-up:hover {
+        color: #EE6C7D;
+    }
+}
+
+body.no-scroll {
+    overflow: hidden;
+}
+
+/* ----- POP UP -----  */
+
+footer {
+    height: 200px;
+}
