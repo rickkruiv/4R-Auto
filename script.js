@@ -1,4 +1,4 @@
-fetch('services.json')
+fetch('json/services.json')
     .then(response => response.json())
     .then(servicos => {
 
@@ -146,7 +146,7 @@ setInterval(() => {
     }
 }, 60000)
 
-fetch('feedbacks.json')
+fetch('json/feedbacks.json')
     .then(response => response.json())
     .then(feedbacks => {
         const feedbackList = feedbacks["feedbacks"];
@@ -184,7 +184,7 @@ fetch('feedbacks.json')
 
 
         const allfeedbacks = document.querySelectorAll(".feedback");
-        
+
         const observerFeedbacks = new IntersectionObserver(entries => {
             entries.forEach(entry => {
                 if (entry.isIntersecting) {
@@ -192,7 +192,7 @@ fetch('feedbacks.json')
                     feedback.classList.add('visible')
                 }
             })
-        },  {
+        }, {
             threshold: 0.5
         })
 
@@ -205,5 +205,4 @@ fetch('feedbacks.json')
     .catch(error => {
         console.log("ERRO AO CARREGAR .JSON", error);
     });
-
 

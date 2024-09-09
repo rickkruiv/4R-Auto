@@ -219,7 +219,7 @@ main {
     border: 0;
     padding: 1rem;
     position: absolute;
-    top: 50%;
+    top: 65%;
     transform: translateY(-50%);
 }
 
@@ -400,7 +400,7 @@ body.no-scroll {
     }
 }
 
-.feedback.visible {
+.visible {
     transform: translate(0, 0);
     opacity: 1;
 }
