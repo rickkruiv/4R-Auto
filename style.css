@@ -53,14 +53,14 @@ header {
             justify-content: center;
             align-items: center;
 
-            & a {
+            & a.nav-link {
                 color: #333333;
                 text-decoration: none;
                 font-weight: bold;
                 position: relative;
             }
 
-            & a::before {
+            & a.nav-link::before {
                 content: '';
                 position: absolute;
                 bottom: 0;
@@ -70,7 +70,7 @@ header {
                 transition: .4s;
             }
 
-            & a:hover::before {
+            & a.nav-link:hover::before {
                 background-color: #333333;
                 width: 100%;
             }
@@ -127,18 +127,19 @@ header {
 main {
     width: 1060px;
     margin: 0 auto;
-    margin-top: 5rem;
 }
 
 #services-container {
+    padding-top: 5rem;
+
     & h2 {
         text-align: center;
         margin-bottom: 1rem;
     }
 
     & .services-type {
-        margin-bottom: 2rem;
         position: relative;
+        padding: .5rem;
     }
 
     & .services-type h2 {
@@ -162,7 +163,7 @@ main {
         display: flex;
         align-items: center;
         justify-content: center;
-        gap: 2rem;
+        gap: 1.5rem;
     }
 
     & .service {
@@ -209,6 +210,55 @@ main {
 
 }
 
+#services {
+    position: relative;
+}
+
+.nav-services-btn {
+    background-color: transparent;
+    border: 0;
+    padding: 1rem;
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+}
+
+.nav-services-btn i {
+    margin: 0 auto;
+}
+
+.nav-services-btn.back,
+.nav-services-btn.next {
+    width: 3rem;
+    height: 3rem;
+    border-radius: 2rem;
+    font-size: 1rem;
+    transition: .4s;
+    cursor: pointer;
+}
+
+.nav-services-btn.back:hover,
+.nav-services-btn.next:hover {
+    background-color: rgba(51, 51, 51, 0.1);
+}
+
+.nav-services-btn.back {
+    left: -3.5rem;
+}
+
+.nav-services-btn.next {
+    right: -3.5rem;
+}
+
+#services-container {
+    overflow: hidden;
+
+    & #services-carrossel {
+        display: flex;
+        transition: transform .5s ease;
+    }
+}
+
 /* ----- POP UP ----- */
 #pop-up-layer {
     background-color: rgba(51, 51, 51, 0.6);
@@ -242,6 +292,7 @@ main {
         height: 200px;
         width: 100%;
         object-fit: cover;
+        object-position: center;
         border-radius: .5rem;
         margin-bottom: 1rem;
     }
@@ -285,8 +336,92 @@ body.no-scroll {
 
 /* ----- POP UP -----  */
 
-footer {
+#depoimentos {
+    padding-top: 5rem;
+
+    & h2 {
+        text-align: center;
+        margin-bottom: 1rem;
+
+    }
+}
+
+.feedbacks-container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 1.5rem;
+    padding: .5rem;
+}
+
+.feedback {
+    width: 300px;
     height: 200px;
+    border-radius: 1rem;
+    padding: 1rem;
+    box-shadow: 0px 0px 10px -5px #686868;
+    position: relative;
+    transition: .2s;
+    cursor: pointer;
+    opacity: 0;
+    transform: translate(-25%, 25%);
+    transition: .4s;
+
+    & h3 {
+        margin-bottom: .5rem;
+        text-align: center;
+    }
+
+    & p {
+        position: relative;
+        padding-left: 1rem;
+    }
+
+    & p::before {
+        content: '';
+        position: absolute;
+        left: 0;
+        background-color: #EE6C7D;
+        border-radius: 5px;
+        width: 3px;
+        height: 100%;
+
+    }
+
+    & .stars {
+        position: absolute;
+        bottom: 1.5rem;
+        left: 1.5rem;
+
+        & span {
+            font-size: 2rem;
+        }
+    }
+}
+
+.feedback.visible {
+    transform: translate(0, 0);
+    opacity: 1;
+}
+
+.feedback.visible:hover {
+    transform: scale(1.05);
+}
+
+.star {
+    color: gold;
+    font-size: 20px;
+}
+
+.empty-star {
+    color: lightgray;
+}
+
+footer {
+    margin-top: 2rem;
+    height: 50vh;
+    background: #f1f1f1;
 }
 
 ::-webkit-scrollbar {

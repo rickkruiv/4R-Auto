@@ -1,0 +1,35 @@
+{
+    "feedbacks": [
+      {
+        "nome": "João Silva",
+        "comentario": "Serviço excelente! Meu carro ficou impecável após a revisão. Recomendo a 4R Auto para todos.",
+        "avaliacao": 5
+      },
+      {
+        "nome": "Mariana Oliveira",
+        "comentario": "O atendimento foi super rápido e eficiente. Fiquei impressionada com o cuidado e a transparência.",
+        "avaliacao": 5
+      },
+      {
+        "nome": "Carlos Pereira",
+        "comentario": "Troquei os pneus e fiz alinhamento, serviço muito bem feito e dentro do prazo. Muito satisfeito!",
+        "avaliacao": 4
+      },
+      {
+        "nome": "Ana Souza",
+        "comentario": "Gostei bastante do serviço de pintura. O carro saiu da oficina parecendo novo. Ótima qualidade.",
+        "avaliacao": 5
+      },
+      {
+        "nome": "Juliana Faria",
+        "comentario": "Fiz um polimento e ficou ótimo, mas houve um pequeno atraso na entrega. No geral, serviço bom.",
+        "avaliacao": 4
+      },
+      {
+        "nome": "Pedro Rocha",
+        "comentario": "Equipe muito atenciosa e profissional. Resolveram o problema do motor do meu carro em tempo recorde!",
+        "avaliacao": 5
+      }
+    ]
+  }
+  

@@ -51,15 +51,20 @@ fetch('services.json')
             ul.appendChild(li2);
             ul.appendChild(li3);
 
+            const a = document.createElement('a');
+            a.href = `https://wa.me/5544997229355?text=Olá%2C%20tudo%20bem%3F%20Gostaria%20de%20contratar%20o%20serviço%20de%20*${servicoInfo.titulo}*%20para%20o%20meu%20veículo%21!`;
+            a.target = "_blank"
             const button = document.createElement("button");
             button.classList.add("cta");
             button.innerHTML = 'Agende o Serviço <i class="fa-solid fa-calendar-days"></i>';
+
+            a.appendChild(button)
 
             divPopUp.appendChild(closeButton);
             divPopUp.appendChild(img);
             divPopUp.appendChild(h2);
             divPopUp.appendChild(ul);
-            divPopUp.appendChild(button);
+            divPopUp.appendChild(a);
 
             divPopUpLayer.appendChild(divPopUp);
 
@@ -69,9 +74,6 @@ fetch('services.json')
 
             document.addEventListener("keydown", fecharComEsc);
         };
-
-
-
 
         function closePopUp() {
             const body = document.body;
@@ -104,3 +106,104 @@ fetch('services.json')
     .catch(error => {
         console.error("ERRO AO CARREGAR .JSON", error);
     });
+
+const carrosselServicesType = document.querySelector("#services-carrossel");
+const prev = document.querySelector('.back');
+const next = document.querySelector('.next');
+let currentIndex = 0;
+
+function carrosselService() {
+    const translateValue = currentIndex * 100;
+
+    carrosselServicesType.style.transform = `translateX(-${translateValue}%)`
+}
+
+function previously() {
+    if (currentIndex > 0) {
+        currentIndex--;
+        carrosselService();
+    };
+}
+
+function nextly() {
+    if (currentIndex < 4) {
+        currentIndex++;
+        carrosselService();
+    } else if (currentIndex == 4) {
+        currentIndex = 0;
+        carrosselService();
+    };
+}
+
+prev.addEventListener('click', previously);
+
+
+next.addEventListener('click', nextly);
+
+setInterval(() => {
+    if (!document.querySelector("#pop-up-layer")) {
+        nextly()
+    }
+}, 60000)
+
+fetch('feedbacks.json')
+    .then(response => response.json())
+    .then(feedbacks => {
+        const feedbackList = feedbacks["feedbacks"];
+        const feedbacksContainer = document.querySelector(".feedbacks-container");
+
+        feedbackList.forEach((feedback) => {
+            const div = document.createElement("div");
+            div.classList.add("feedback");
+
+            const h3 = document.createElement("h3");
+            h3.textContent = feedback.nome
+
+            const coment = document.createElement("p");
+            coment.textContent = feedback.comentario;
+
+            const stars = document.createElement('div');
+            stars.classList.add("stars");
+            stars.innerHTML = getStars(feedback.avaliacao);
+
+            div.appendChild(h3);
+            div.appendChild(coment);
+            div.appendChild(stars)
+            feedbacksContainer.appendChild(div);
+
+
+        })
+
+        function getStars(rating) {
+            let stars = '';
+            for (let i = 0; i < 5; i++) {
+                stars += i < rating ? '<span class="star">&#9733;</span>' : '<span class="star empty-star">&#9733;</span>';
+            }
+            return stars;
+        }
+
+
+        const allfeedbacks = document.querySelectorAll(".feedback");
+        
+        const observerFeedbacks = new IntersectionObserver(entries => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    const feedback = entry.target;
+                    feedback.classList.add('visible')
+                }
+            })
+        },  {
+            threshold: 0.5
+        })
+
+        allfeedbacks.forEach(feedback => {
+            observerFeedbacks.observe(feedback)
+        })
+
+    })
+
+    .catch(error => {
+        console.log("ERRO AO CARREGAR .JSON", error);
+    });
+
+

@@ -21,14 +21,16 @@
                 <h2>4R Auto</h2>
             </div>
             <nav>
-                <a href="#services-container">Serviços</a>
-                <a href="#depoimentos">Depoimentos</a>
-                <a href="#sobre-nos">Sobre Nós</a>
-                <a href="#contato">Contato</a>
+                <a href="#services-container" class="nav-link">Serviços</a>
+                <a href="#depoimentos" class="nav-link">Depoimentos</a>
+                <a href="#sobre-nos" class="nav-link">Sobre Nós</a>
+                <a href="#contato" class="nav-link">Contato</a>
 
-                <button class="cta">
-                    Agende <i class="fa-solid fa-calendar-days"></i>
-                </button>
+                <a href="#" target="_blank">
+                    <button class="cta">
+                        Agende <i class="fa-solid fa-calendar-days"></i>
+                    </button>
+                </a>
             </nav>
         </div>
     </header>
@@ -47,194 +49,212 @@
                 performance e segurança para o seu veículo.
             </p>
 
-            <button class="cta">
-                Agende um Serviço <i class="fa-solid fa-calendar-days"></i>
-            </button>
+            <a href="#" target="_blank">
+                <button class="cta">
+                    Agende um Serviço <i class="fa-solid fa-calendar-days"></i>
+                </button>
+            </a>
         </div>
     </section>
 
     <main>
         <!-- SERVICES -->
-        <section id="services-container">
-            <h2>Serviços</h2>
+        <section id="services">
+            <div id="services-container">
+                <h2>Serviços</h2>
 
-            <!-- MECÂNICOS -->
-            <div class="services-type">
-                <h2>Mecânicos</h2>
-                <div class="services-content">
+                <div id="services-carrossel">
+                    <!-- MECÂNICOS -->
+                    <div class="services-type">
+                        <h2>Mecânicos</h2>
+                        <div class="services-content">
 
-                    <div class="service" data-titulo="ManutencaoPreventiva">
-                        <img src="imgs/ManutencaoPreventiva.webp" alt="manutencao-preventiva">
-                        <h3 class="service-title">Manutenção Preventiva</h3>
-                        <p>
-                            Inspeção geral, troca de óleo, verificação de fluidos e filtros.
-                        </p>
-                        <button class="find-out">Saiba mais</button>
+                            <div class="service" data-titulo="ManutencaoPreventiva">
+                                <img src="imgs/ManutencaoPreventiva.webp" alt="manutencao-preventiva">
+                                <h3 class="service-title">Manutenção Preventiva</h3>
+                                <p>
+                                    Inspeção geral, troca de óleo, verificação de fluidos e filtros.
+                                </p>
+                                <button class="find-out">Saiba mais</button>
+                            </div>
+
+                            <div class="service" data-titulo="ReparosMecanicos">
+                                <img src="imgs/ReparosMecanicos.webp" alt="reparos-mecanicos">
+                                <h3 class="service-title">Reparos Mecânicos</h3>
+                                <p>
+                                    Conserto de motores, caixas de câmbio, eixos, e sistemas de freio.
+                                </p>
+                                <button class="find-out">Saiba mais</button>
+                            </div>
+
+                            <div class="service" data-titulo="DiagnosticoEletronico">
+                                <img src="imgs/DiagnosticoEletronico.webp" alt="diagnostico-eletronico">
+                                <h3 class="service-title">Diagnóstico Eletrônico</h3>
+                                <p>
+                                    Análise de falhas com scanners para identificar e corrigir problemas eletrônicos.
+                                </p>
+                                <button class="find-out">Saiba mais</button>
+                            </div>
+
+                        </div>
                     </div>
 
-                    <div class="service" data-titulo="ReparosMecanicos">
-                        <img src="imgs/ReparosMecanicos.webp" alt="reparos-mecanicos">
-                        <h3 class="service-title">Reparos Mecânicos</h3>
-                        <p>
-                            Conserto de motores, caixas de câmbio, eixos, e sistemas de freio.
-                        </p>
-                        <button class="find-out">Saiba mais</button>
+                    <!-- ESTÉTICOS -->
+                    <div class="services-type">
+                        <h2>Estéticos</h2>
+                        <div class="services-content">
+
+                            <div class="service" data-titulo="PinturaPersonalizada">
+                                <img src="imgs/PinturaPersonalizada.webp" alt="pintura-personalizada">
+                                <h3 class="service-title">Pintura Personalizada</h3>
+                                <p>
+                                    Pintura completa ou parcial com acabamentos especiais, como fosco ou perolizado.
+                                </p>
+                                <button class="find-out">Saiba mais</button>
+                            </div>
+
+                            <div class="service" data-titulo="PolimentoCristalizacao">
+                                <img src="imgs/PolimentoCristalizacao.webp" alt="polimento">
+                                <h3 class="service-title">Polimento e Cristalização</h3>
+                                <p>
+                                    Polimento da carroceria e aplicação de proteção extra com cristalização ou
+                                    vitrificação.
+                                </p>
+                                <button class="find-out">Saiba mais</button>
+                            </div>
+
+                            <div class="service" data-titulo="Envelopamento">
+                                <img src="imgs/Envelopamento.webp" alt="envelopamento">
+                                <h3 class="service-title">Envelopamento</h3>
+                                <p>
+                                    Aplicação de vinil adesivo para mudar a cor do carro ou adicionar detalhes
+                                    estilizados.
+                                </p>
+                                <button class="find-out">Saiba mais</button>
+                            </div>
+
+                        </div>
                     </div>
 
-                    <div class="service" data-titulo="DiagnosticoEletronico">
-                        <img src="imgs/DiagnosticoEletronico.webp" alt="diagnostico-eletronico">
-                        <h3 class="service-title">Diagnóstico Eletrônico</h3>
-                        <p>
-                            Análise de falhas com scanners para identificar e corrigir problemas eletrônicos.
-                        </p>
-                        <button class="find-out">Saiba mais</button>
+                    <!-- SUSPENÇÃO -->
+                    <div class="services-type">
+                        <h2>Suspenção e Alinhamento</h2>
+                        <div class="services-content">
+
+                            <div class="service" data-titulo="AlinhamentoBalanceamento">
+                                <img src="imgs/AlinhamentoBalanceamento.webp" alt="Alinhamento_balanceamento">
+                                <h3 class="service-title">Balanceamento</h3>
+                                <p>
+                                    Ajuste da suspensão e balanceamento das rodas para garantir segurança e
+                                    estabilidade.
+                                </p>
+                                <button class="find-out">Saiba mais</button>
+                            </div>
+
+                            <div class="service" data-titulo="TrocaSuspensao">
+                                <img src="imgs/TrocaSuspensao.webp" alt="suspensao">
+                                <h3 class="service-title">Troca de Suspensão</h3>
+                                <p>
+                                    Substituição e ajustes de amortecedores, molas e outros componentes de suspensão.
+                                </p>
+                                <button class="find-out">Saiba mais</button>
+                            </div>
+
+                            <div class="service" data-titulo="RebaixamentoSuspensao">
+                                <img src="imgs/RebaixamentoSuspensao.webp" alt="rebaixamento">
+                                <h3 class="service-title">Rebaixamento</h3>
+                                <p>
+                                    Ajuste da altura do veículo para melhorar a estética e o desempenho.
+                                </p>
+                                <button class="find-out">Saiba mais</button>
+                            </div>
+
+                        </div>
                     </div>
 
+                    <!-- PERFORMANCE -->
+                    <div class="services-type">
+                        <h2>Performance</h2>
+                        <div class="services-content">
+
+                            <div class="service" data-titulo="TurboSupercharger">
+                                <img src="imgs/TurboSupercharger.webp" alt="turbo">
+                                <h3 class="service-title">Turbo e Supercharger</h3>
+                                <p>
+                                    Adição de sistemas de indução forçada para aumentar a potência do motor.
+                                </p>
+                                <button class="find-out">Saiba mais</button>
+                            </div>
+
+                            <div class="service" data-titulo="RemapECU">
+                                <img src="imgs/RemapECU.webp" alt="Remap-ECU">
+                                <h3 class="service-title">Remap de ECU</h3>
+                                <p>
+                                    Ajuste do software do carro para melhorar o desempenho e a eficiência.
+                                </p>
+                                <button class="find-out">Saiba mais</button>
+                            </div>
+
+                            <div class="service" data-titulo="EscapeEsportivo">
+                                <img src="imgs/EscapeEsportivo.webp" alt="escapamento-esportivo">
+                                <h3 class="service-title">Escape Esportivo</h3>
+                                <p>
+                                    Instalação de sistemas de escape para aumentar a performance e melhorar o som do
+                                    motor.
+                                </p>
+                                <button class="find-out">Saiba mais</button>
+                            </div>
+
+                        </div>
+                    </div>
+
+                    <!-- PNEUS -->
+                    <div class="services-type">
+                        <h2>Pneus</h2>
+                        <div class="services-content">
+
+                            <div class="service" data-titulo="TrocaPneus">
+                                <img src="imgs/TrocaPneus.webp" alt="troca_de_pneu">
+                                <h3 class="service-title">Troca de Pneus</h3>
+                                <p>
+                                    Inspeção geral, troca de óleo, verificação de fluidos e filtros.
+                                </p>
+                                <button class="find-out">Saiba mais</button>
+                            </div>
+
+                            <div class="service" data-titulo="ReparoPneus">
+                                <img src="imgs/ReparoPneus.webp" alt="reparos-de-pneu">
+                                <h3 class="service-title">Reparo de Pneus</h3>
+                                <p>
+                                    Conserto de furos e danos menores em pneus.
+                                </p>
+                                <button class="find-out">Saiba mais</button>
+                            </div>
+
+                            <div class="service" data-titulo="CalibragemNitrogenio">
+                                <img src="imgs/CalibragemNitrogenio.webp" alt="calibragem-com-Nitrog">
+                                <h3 class="service-title">Calibragem com Nitrogênio</h3>
+                                <p>
+                                    Uso de nitrogênio para manter a pressão dos pneus por mais tempo e melhorar a
+                                    performance.
+                                </p>
+                                <button class="find-out">Saiba mais</button>
+                            </div>
+
+                        </div>
+                    </div>
                 </div>
             </div>
 
-            <!-- ESTÉTICOS -->
-            <div class="services-type">
-                <h2>Estéticos</h2>
-                <div class="services-content">
-
-                    <div class="service" data-titulo="PinturaPersonalizada">
-                        <img src="imgs/PinturaPersonalizada.webp" alt="pintura-personalizada">
-                        <h3 class="service-title">Pintura Personalizada</h3>
-                        <p>
-                            Pintura completa ou parcial com acabamentos especiais, como fosco ou perolizado.
-                        </p>
-                        <button class="find-out">Saiba mais</button>
-                    </div>
-
-                    <div class="service" data-titulo="PolimentoCristalizacao">
-                        <img src="imgs/PolimentoCristalizacao.webp" alt="polimento">
-                        <h3 class="service-title">Polimento e Cristalização</h3>
-                        <p>
-                            Polimento da carroceria e aplicação de proteção extra com cristalização ou vitrificação.
-                        </p>
-                        <button class="find-out">Saiba mais</button>
-                    </div>
-
-                    <div class="service" data-titulo="Envelopamento">
-                        <img src="imgs/Envelopamento.webp" alt="envelopamento">
-                        <h3 class="service-title">Envelopamento</h3>
-                        <p>
-                            Aplicação de vinil adesivo para mudar a cor do carro ou adicionar detalhes estilizados.
-                        </p>
-                        <button class="find-out">Saiba mais</button>
-                    </div>
-
-                </div>
-            </div>
-
-            <!-- SUSPENÇÃO -->
-            <div class="services-type">
-                <h2>Suspenção e Alinhamento</h2>
-                <div class="services-content">
-
-                    <div class="service" data-titulo="AlinhamentoBalanceamento">
-                        <img src="imgs/AlinhamentoBalanceamento.webp" alt="Alinhamento_balanceamento">
-                        <h3 class="service-title">Balanceamento</h3>
-                        <p>
-                            Ajuste da suspensão e balanceamento das rodas para garantir segurança e estabilidade.
-                        </p>
-                        <button class="find-out">Saiba mais</button>
-                    </div>
-
-                    <div class="service" data-titulo="TrocaSuspensao">
-                        <img src="imgs/TrocaSuspensao.webp" alt="suspensao">
-                        <h3 class="service-title">Troca de Suspensão</h3>
-                        <p>
-                            Substituição e ajustes de amortecedores, molas e outros componentes de suspensão.
-                        </p>
-                        <button class="find-out">Saiba mais</button>
-                    </div>
-
-                    <div class="service" data-titulo="RebaixamentoSuspensao">
-                        <img src="imgs/RebaixamentoSuspensao.webp" alt="rebaixamento">
-                        <h3 class="service-title">Rebaixamento</h3>
-                        <p>
-                            Ajuste da altura do veículo para melhorar a estética e o desempenho.
-                        </p>
-                        <button class="find-out">Saiba mais</button>
-                    </div>
-
-                </div>
-            </div>
-
-            <!-- PERFORMANCE -->
-            <div class="services-type">
-                <h2>Performance</h2>
-                <div class="services-content">
-
-                    <div class="service" data-titulo="TurboSupercharger">
-                        <img src="imgs/TurboSupercharger.webp" alt="turbo">
-                        <h3 class="service-title">Turbo e Supercharger</h3>
-                        <p>
-                            Adição de sistemas de indução forçada para aumentar a potência do motor.
-                        </p>
-                        <button class="find-out">Saiba mais</button>
-                    </div>
-
-                    <div class="service" data-titulo="RemapECU">
-                        <img src="imgs/RemapECU.webp" alt="Remap-ECU">
-                        <h3 class="service-title">Remap de ECU</h3>
-                        <p>
-                            Ajuste do software do carro para melhorar o desempenho e a eficiência.
-                        </p>
-                        <button class="find-out">Saiba mais</button>
-                    </div>
-
-                    <div class="service" data-titulo="EscapeEsportivo">
-                        <img src="imgs/EscapeEsportivo.webp" alt="escapamento-esportivo">
-                        <h3 class="service-title">Escape Esportivo</h3>
-                        <p>
-                            Instalação de sistemas de escape para aumentar a performance e melhorar o som do motor.
-                        </p>
-                        <button class="find-out">Saiba mais</button>
-                    </div>
-
-                </div>
-            </div>
-
-            <!-- PNEUS -->
-            <div class="services-type">
-                <h2>Pneus</h2>
-                <div class="services-content">
-
-                    <div class="service" data-titulo="TrocaPneus">
-                        <img src="imgs/TrocaPneus.webp" alt="troca_de_pneu">
-                        <h3 class="service-title">Troca de Pneus</h3>
-                        <p>
-                            Inspeção geral, troca de óleo, verificação de fluidos e filtros.
-                        </p>
-                        <button class="find-out">Saiba mais</button>
-                    </div>
-
-                    <div class="service" data-titulo="ReparoPneus">
-                        <img src="imgs/ReparoPneus.webp" alt="reparos-de-pneu">
-                        <h3 class="service-title">Reparo de Pneus</h3>
-                        <p>
-                            Conserto de furos e danos menores em pneus.
-                        </p>
-                        <button class="find-out">Saiba mais</button>
-                    </div>
-
-                    <div class="service" data-titulo="CalibragemNitrogenio">
-                        <img src="imgs/CalibragemNitrogenio.webp" alt="calibragem-com-Nitrog">
-                        <h3 class="service-title">Calibragem com Nitrogênio</h3>
-                        <p>
-                            Uso de nitrogênio para manter a pressão dos pneus por mais tempo e melhorar a performance.
-                        </p>
-                        <button class="find-out">Saiba mais</button>
-                    </div>
-
-                </div>
-            </div>
-
+            <button class="nav-services-btn back"><i class="fa-solid fa-chevron-left"></i></button>
+            <button class="nav-services-btn next"><i class="fa-solid fa-chevron-right"></i></button>
         </section>
 
+
+        <section id="depoimentos">
+            <h2>Depoimentos</h2>
+            <div class="feedbacks-container"></div>
+        </section>
     </main>
 
     <footer></footer>
