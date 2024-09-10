@@ -28,6 +28,11 @@ button.cta {
     font-weight: bold;
 }
 
+h2 {
+    text-transform: uppercase;
+    text-align: center;
+}
+
 header {
     position: fixed;
     width: 100%;
@@ -83,7 +88,12 @@ header {
     }
 }
 
+section {
+    padding-top: 5rem;
+}
+
 #hero {
+    padding-top: 0;
     margin-top: 3.5rem;
     background: url(imgs/volkswagen-red-golf-gti.jpg);
     background-repeat: no-repeat;
@@ -130,10 +140,7 @@ main {
 }
 
 #services-container {
-    padding-top: 5rem;
-
     & h2 {
-        text-align: center;
         margin-bottom: 1rem;
     }
 
@@ -337,10 +344,7 @@ body.no-scroll {
 /* ----- POP UP -----  */
 
 #depoimentos {
-    padding-top: 5rem;
-
     & h2 {
-        text-align: center;
         margin-bottom: 1rem;
 
     }
@@ -358,7 +362,7 @@ body.no-scroll {
 .feedback {
     width: 300px;
     height: 200px;
-    border-radius: 1rem;
+    border-radius: 10px;
     padding: 1rem;
     box-shadow: 0px 0px 10px -5px #686868;
     position: relative;
@@ -406,7 +410,7 @@ body.no-scroll {
 }
 
 .feedback.visible:hover {
-    transform: scale(1.05);
+    transform: scale(1.02);
 }
 
 .star {
@@ -417,6 +421,78 @@ body.no-scroll {
 .empty-star {
     color: lightgray;
 }
+
+#sobre-nos {
+    text-align: center;
+
+    & h2 {
+        margin-bottom: 2rem;
+    }
+
+    & p {
+        margin-bottom: 1rem;
+    }
+
+    & span {
+        color: #EE6C7D;
+        font-weight: bold;
+    }
+}
+
+#contato {
+    margin: 0 auto;
+    width: 60%;
+
+    & #form-container {
+        margin-top: 2rem;
+        display: flex;
+        align-items: flex;
+        justify-content: center;
+        flex-direction: column;
+
+        & .form-control {
+            display: flex;
+            align-items: flex-start;
+            justify-content: center;
+            flex-direction: column;
+            margin-bottom: 1rem;
+            width: 80%;
+            margin: 0 auto;
+            margin-bottom: 1rem;
+
+            & label {
+                font-size: 1rem;
+                margin-bottom: .5rem;
+                font-weight: bold;
+            }
+
+            & input,
+            textarea {
+                width: 100%;
+                border: 2px solid #EE6C7D;
+                outline: none;
+                padding: .5rem 1rem;
+                border-radius: 10px;
+            }
+
+            & textarea {
+                resize: none;
+                padding: 1rem;
+            }
+        }
+
+        & button.send {
+            background-color: #EE6C7D;
+            color: #FFFFFF;
+            padding: .5rem 1rem;
+            border: 2px solid #EE6C7D;
+            border-radius: 1rem;
+            width: 150px;
+            margin: 0 auto;
+        }
+    }
+}
+
 
 footer {
     margin-top: 2rem;
@@ -440,4 +516,10 @@ footer {
 
 ::-webkit-scrollbar-thumb:hover {
     background: #EE6C7D;
+}
+
+input[type=number]::-webkit-outer-spin-button,
+input[type=number]::-webkit-inner-spin-button {
+    -webkit-appearance: none;
+    margin: 0;
 }
