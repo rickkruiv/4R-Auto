@@ -443,7 +443,7 @@ body.no-scroll {
     margin: 0 auto;
     width: 60%;
 
-    & #form-container {
+    & #form-container form {
         margin-top: 2rem;
         display: flex;
         align-items: flex;
@@ -476,21 +476,47 @@ body.no-scroll {
             }
 
             & textarea {
-                resize: none;
+                resize: vertical;
                 padding: 1rem;
+                height: 120px;
             }
         }
 
-        & button.send {
+        & button.send-button {
             background-color: #EE6C7D;
+            border: 2px solid #EE6C7D;
+            font-weight: bold;
             color: #FFFFFF;
             padding: .5rem 1rem;
-            border: 2px solid #EE6C7D;
             border-radius: 1rem;
-            width: 150px;
+            width: 200px;
             margin: 0 auto;
         }
+
+        & button.send-button:hover {
+            background-color: #FFFFFF;
+            color: #EE6C7D;
+        }
     }
+}
+
+.form-control span {
+    font-size: .6rem;
+    padding: .2rem .5rem;
+    text-transform: uppercase;
+    font-weight: bold;
+    color: #ff4444;
+    visibility: hidden;
+    transition: .2s;
+}
+
+.form-control.error input,
+.form-control.error textarea {
+    border: 2px solid #ff4444 !important;
+}
+
+.form-control.error span {
+    visibility: visible;
 }
 
 
@@ -498,7 +524,57 @@ footer {
     margin-top: 2rem;
     height: 50vh;
     background: #f1f1f1;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+    padding: 2rem;
 }
+
+#footer{
+    width: 800px;
+    display: flex;
+    justify-content: space-around;
+    align-items: flex-start;
+}
+
+#footer h4 {
+    margin-bottom: 1rem;
+}
+
+#footer a {
+    text-decoration: none;
+    color: #686868;
+    margin-bottom: .4rem;
+}
+
+#footer a:hover {
+    color: #333333;
+}
+
+.sections,
+.saiba-mais {
+    display: flex;
+    flex-direction: column;
+
+}
+
+#copyright {
+    text-align: center;
+}
+
+#copyright p {
+    margin-top: .5rem;
+    width: 800px;
+    font-size: .8rem;
+}
+
+#copyright a {
+    color: #EE6C7D;
+    text-decoration: none;
+    font-weight: bold;
+}
+
 
 ::-webkit-scrollbar {
     width: 4px;

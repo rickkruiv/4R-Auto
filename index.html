@@ -260,13 +260,23 @@
         <section id="sobre-nos">
             <h2>Sobre nós</h2>
             <p>
-                A 4R Auto nasceu da nossa <span>paixão por veículos</span> e pelo <span>compromisso com a excelência</span> em cada serviço que oferecemos. Somos uma equipe de profissionais altamente capacitados, com uma abordagem centrada no cliente e na qualidade. Nosso objetivo é <span>proporcionar uma experiência diferenciada</span>, onde cada detalhe conta, desde pequenos ajustes até grandes reparos.
+                A 4R Auto nasceu da nossa <span>paixão por veículos</span> e pelo <span>compromisso com a
+                    excelência</span> em cada serviço que oferecemos. Somos uma equipe de profissionais altamente
+                capacitados, com uma abordagem centrada no cliente e na qualidade. Nosso objetivo é <span>proporcionar
+                    uma experiência diferenciada</span>, onde cada detalhe conta, desde pequenos ajustes até grandes
+                reparos.
             </p>
             <p>
-                Com foco em manutenção preventiva e correções precisas, <span>garantimos que seu carro receba o tratamento que merece</span>, sempre utilizando as melhores técnicas e tecnologias disponíveis. Trabalhamos de forma transparente, explicando cada etapa do processo e oferecendo soluções que combinam eficiência e confiabilidade.
+                Com foco em manutenção preventiva e correções precisas, <span>garantimos que seu carro receba o
+                    tratamento que merece</span>, sempre utilizando as melhores técnicas e tecnologias disponíveis.
+                Trabalhamos de forma transparente, explicando cada etapa do processo e oferecendo soluções que combinam
+                eficiência e confiabilidade.
             </p>
             <p>
-                Acreditamos que <span>um carro bem cuidado reflete segurança, desempenho e longevidade</span>. Por isso, estamos comprometidos com revisões detalhadas, diagnósticos precisos e <span>resultados que superam as expectativas</span>. Na 4R Auto, cada cliente é tratado com responsabilidade, e cada carro é tratado como uma extensão de nossa própria garagem.
+                Acreditamos que <span>um carro bem cuidado reflete segurança, desempenho e longevidade</span>. Por isso,
+                estamos comprometidos com revisões detalhadas, diagnósticos precisos e <span>resultados que superam as
+                    expectativas</span>. Na 4R Auto, cada cliente é tratado com responsabilidade, e cada carro é tratado
+                como uma extensão de nossa própria garagem.
             </p>
 
             </p>
@@ -275,32 +285,72 @@
         <section id="contato">
             <h2>Converse com a gente</h2>
             <div id="form-container">
-                <div class="form-control">
-                    <label for="nome">Nome</label>
-                    <input type="text" name="nome" id="nome" placeholder="Nome">
-                </div>
+                <form>
 
-                <div class="form-control">
-                    <label for="email">Email</label>
-                    <input type="email" name="email" id="email" placeholder="Email">
-                </div>
+                    <div class="form-control">
+                        <label for="nome">Nome</label>
+                        <input type="text" name="nome" id="nome" placeholder="Nome" oninput="checkNome()">
+                        <span></span>
+                    </div>
 
-                <div class="form-control">
-                    <label for="phone">Telefone</label>
-                    <input type="number" name="phone" id="phone" placeholder="5544998765432">
-                </div>
+                    <div class="form-control">
+                        <label for="email">Email</label>
+                        <input type="email" name="email" id="email" placeholder="Email" oninput="checkEmail()">
+                        <span></span>
+                    </div>
 
-                <div class="form-control">
-                    <label for="mensage">Mensagem</label>
-                    <textarea name="mensage" id="mensage" placeholder="Escreva aqui o assunto"></textarea>
-                </div>
+                    <div class="form-control">
+                        <label for="phone">Telefone</label>
+                        <input type="number" name="phone" id="phone" placeholder="5544998765432" oninput="checkPhone()">
+                        <span></span>
+                    </div>
 
-                <button class="send">Enviar <i class="fa-solid fa-paper-plane"></i></button>
+                    <div class="form-control">
+                        <label for="mensage">Mensagem</label>
+                        <textarea name="mensage" id="mensage" placeholder="Escreva aqui o assunto"
+                            oninput="checkMensagem()"></textarea>
+                        <span></span>
+                    </div>
+
+                    <button type="submit" class="send-button">Enviar <i class="fa-solid fa-paper-plane"></i></button>
+                </form>
             </div>
         </section>
     </main>
 
-    <footer></footer>
+    <footer>
+
+        <div id="footer">
+            <div class="sections">
+                <h4>Seções</h4>
+                <a href="">Principal</a>
+                <a href="">Serviços</a>
+                <a href="">Avaliações</a>
+                <a href="">Sobre nós</a>
+                <a href="">Contato</a>
+            </div>
+
+            <div class="saiba-mais">
+                <h4>Saiba mais</h4>
+                <a href="">Politicas de Privacidade</a>
+                <a href="">Trabalhe Conosco</a>
+                <a href="">Dúvidas</a>
+            </div>
+        </div>
+
+        <!-- copyright -->
+        <div id="copyright">
+            <h4>© 2024 4R Auto. Todos os direitos reservados.</h4>
+            <p>
+                Este site e seu design, desenvolvimento e conteúdo são de propriedade exclusiva. O projeto foi
+                idealizado e desenvolvido por <a href="https://www.linkedin.com/in/hfpolizer/" target="_blank">Henrique
+                    Ferreira Polizer</a>, com todos os direitos reservados. A reprodução, distribuição ou qualquer uso
+                não autorizado de qualquer material deste site, sem a devida permissão, é estritamente proibido e pode
+                resultar em medidas legais.
+            </p>
+        </div>
+    </footer>
+
 </body>
 
 </html>

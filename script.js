@@ -206,3 +206,12 @@ fetch('json/feedbacks.json')
         console.log("ERRO AO CARREGAR .JSON", error);
     });
 
+// contato //
+// contato //
+const form = document.querySelector('#form-container form');
+const nome = document.querySelector('#nome');
+const email = document.querySelector('#email');
+const phone = document.querySelector('#phone');
+const mensage = document.querySelector('#mensage');
+const sendButton = document.querySelector('.send-button');
+
