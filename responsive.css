@@ -1,0 +1,126 @@
+@media (max-width: 1200px) {
+    main {
+        width: 100% !important;
+        padding: 2rem;
+    }
+
+    #services {
+        width: 835px !important;
+        margin: 0 auto;
+    }
+
+    #services-carrossel {
+        width: 4175px !important;
+    }
+
+    .service {
+        width: 257px !important;
+        height: 300px !important;
+    }
+
+    .service img {
+        width: 225px !important;
+        height: 100px !important;
+    }
+
+    .service button {
+        width: 225px !important;
+    }
+
+    .pop-up {
+        width: 80%;
+    }
+
+    nav {
+        display: none !important;
+    }
+
+    #contato {
+        width: 100%;
+    }
+}
+
+@media (max-width: 950px) {
+    #services {
+        width: 835px !important;
+        margin: 0 auto;
+    }
+
+    #services-container {
+        overflow: visible;
+    }
+
+    #services-carrossel {
+        flex-wrap: wrap;
+        width: auto !important;
+    }
+
+    .services-type {
+        padding: 0 !important;
+        transform: scale(.9);
+    }
+
+    .service {
+        width: 257px !important;
+        height: 300px !important;
+    }
+
+    .service img {
+        width: 225px !important;
+        height: 100px !important;
+    }
+
+    .service button {
+        width: 225px !important;
+    }
+
+    .nav-services-btn {
+        display: none;
+    }
+}
+
+@media (max-width: 900px) {
+    .feedbacks-container {
+        grid-template-columns: 1fr 1fr;
+    }
+
+    #services {
+        width: 100% !important;
+    }
+
+    #services-carrossel {
+        flex-direction: column;
+    }
+
+    .services-type h2 {
+        font-size: 1.5rem !important;
+    }
+
+    .services-content {
+        display: none !important;
+    }
+}
+
+@media (max-width: 480px) {
+    #hero {
+        height: 50vh !important;
+    }
+
+    .banner-layer {
+        padding: 1.5rem !important;
+        text-align: start;
+        height: 50vh !important;
+    }
+
+    .banner-layer p {
+        font-size: .8rem !important;
+    }
+
+    .banner-layer h1 {
+        font-size: 1rem !important;
+    }
+
+    .feedbacks-container {
+        grid-template-columns: 1fr;
+    }
+}

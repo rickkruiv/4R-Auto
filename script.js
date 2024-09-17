@@ -113,7 +113,7 @@ const next = document.querySelector('.next');
 let currentIndex = 0;
 
 function carrosselService() {
-    const translateValue = currentIndex * 100;
+    const translateValue = currentIndex * 20;
 
     carrosselServicesType.style.transform = `translateX(-${translateValue}%)`
 }
@@ -140,11 +140,13 @@ prev.addEventListener('click', previously);
 
 next.addEventListener('click', nextly);
 
-setInterval(() => {
-    if (!document.querySelector("#pop-up-layer")) {
-        nextly()
-    }
-}, 60000)
+if (window.innerWidth > 950) {
+    setInterval(() => {
+        if (!document.querySelector("#pop-up-layer")) {
+            nextly()
+        }
+    }, 10000)
+}
 
 fetch('json/feedbacks.json')
     .then(response => response.json())
@@ -206,12 +208,8 @@ fetch('json/feedbacks.json')
         console.log("ERRO AO CARREGAR .JSON", error);
     });
 
-// contato //
-// contato //
-const form = document.querySelector('#form-container form');
-const nome = document.querySelector('#nome');
-const email = document.querySelector('#email');
-const phone = document.querySelector('#phone');
-const mensage = document.querySelector('#mensage');
-const sendButton = document.querySelector('.send-button');
+const sendBtb = document.querySelector('.send-button');
 
+sendBtb.addEventListener('click', (e) => {
+    e.preventDefault()
+})
